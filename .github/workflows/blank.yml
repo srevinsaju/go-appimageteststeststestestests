@@ -26,6 +26,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
+          export APPIMAGE_EXTRACT_AND_RUN=1
           yes | pacman -Syu wget --noconfirm
           wget https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage
           wget https://people.sugarlabs.org/~srevinsaju/dl/appimagetool
