@@ -40,9 +40,12 @@ jobs:
           rm ./appimagetool-x86_64.AppImage
           ./appimagetool-556*.AppImage squashfs-root
           rm ./appimagetool-556*.AppImage 
+          mv appimagetool*.AppImage appimagetoolold.AppImage
           ls
-          ./appimagetool*.AppImage squashfs-root
+          ./appimagetoolold.AppImage squashfs-root
           ls
+          ./appimagetoolold.AppImage sections ./appimagetool-*.AppImage
+          
     
           
       # Runs a set of commands using the runners shell
